@@ -1,4 +1,6 @@
 import './App.css';
+import Instructions from './Instructions'; //component import 
+import React from 'react';
 
 const displayQuote = event => alert(event.target.id);
 const quotes = [
@@ -23,6 +25,7 @@ function App() {
     <div className="main">
    <h1 id={greeting}> Quote Generator</h1>
    <p>Quotes to change your life.</p>
+   <Instructions /> 
    <ul>
   {    
     quotes.map(quote => (
