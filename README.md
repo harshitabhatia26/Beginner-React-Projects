@@ -1,1 +1,1 @@
-# React-tutorials
+# Beginner Friendly React Projects
