@@ -1,0 +1,16 @@
+.Product span {
+    font-size: 50px;
+}
+
+.wrapper {
+    padding: 20px;
+    font-size: 20px;
+}
+
+.wrapper button {
+    font-size: 20px;
+    background: none;
+    border: black solid 1px;
+    margin:20px;
+    cursor: pointer;
+}
