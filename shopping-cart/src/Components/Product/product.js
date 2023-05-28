@@ -1,29 +1,15 @@
 import React from "react";
 import { useReducer } from 'react';
 import './product.css'
-
-const products = [
-    {
-        name: 'Ice cream',
-        price: 5,
-    },
-    {
-        name: 'Donuts',
-        price: 3,
-    },
-    {
-        name: 'Watermelon',
-        price: 4,
-    }
-]
+import foods from "./Article";
 
 function cartReducer(state, action) {
     switch(action.type){
         case 'add':
-            return[...state, action.name];
+            return[...state, action.food_name];
         case 'remove':
             const update = [...state];
-            update.splice(update.indexOf(action.name), 1);
+            update.splice(update.indexOf(action.food_name), 1);
             return update;
         default:
             return state;
@@ -43,16 +29,16 @@ export default function Product () {
 const [cart, setCart] = useReducer(cartReducer, []);
 const [total, setTotal] = useReducer(totalReducer, 0);
 
-function add(product) {
-    const {name, price} = product;
-    setCart({name, type: 'add'});
-    setTotal({price, type:'add'});
+function add(food) {
+    const {food_name, food_price} = food;
+    setCart({food_name, type: 'add'});
+    setTotal({food_price, type:'add'});
 }
 
-function remove(product) {
-    const {name, price} = product;
-    setCart({name, type: 'remove'});
-    setTotal({price, type: 'remove'});
+function remove(food) {
+    const {food_name, food_price} = food;
+    setCart({food_name, type: 'remove'});
+    setTotal({food_price, type: 'remove'});
 }
 
     return(
@@ -64,13 +50,13 @@ function remove(product) {
                 Total: {total}
             </div>
             <div>
-                {products.map(product => (
-                    <div key={product.name}>
-                    <div className="product">
-                        {product.name}
+                {foods.map(food => (
+                    <div key={food.food_name}>
+                    <div className="food">
+                        {food.food_name}
                     </div>
-                    <button onClick={() => add(product)}>Add</button>
-                    <button onClick={() => remove(product)}>Remove</button>
+                    <button onClick={() => add(food)}>Add</button>
+                    <button onClick={() => remove(food)}>Remove</button>
                     </div>
                 ))}
             </div>
