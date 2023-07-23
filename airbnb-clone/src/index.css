@@ -17,3 +17,24 @@ h1{
 h3{
   font-size:1.2rem;
 }
+
+.card {
+  width: 200px;
+}
+
+.card-title {
+  font-size: 12px;
+}
+
+.card-body {
+  font-size: 12px;
+}
+
+.btn {
+  font-size:1rem;
+}
+
+
+.light {
+  color: gray;
+}
