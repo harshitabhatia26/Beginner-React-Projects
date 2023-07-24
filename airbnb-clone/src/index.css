@@ -20,6 +20,10 @@ h3{
 
 .card {
   width: 200px;
+  flex: 0 0 auto;         /* ADD */
+  display: flex;          /* ADD */
+  flex-direction: column; /* ADD */
+
 }
 
 .card-title {
@@ -37,4 +41,10 @@ h3{
 
 .light {
   color: gray;
+}
+
+.badge {
+  position: absolute;
+  margin: 0.5rem;
+  font-weight: 400;
 }

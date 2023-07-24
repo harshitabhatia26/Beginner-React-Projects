@@ -5,16 +5,12 @@ import data from './data';
 function App() {
   const carddata = data.map((dataeach)=>
     <Card 
-    img = {dataeach.coverImg}
-    rating = {dataeach.stats.rating}
-    reviewCount = {dataeach.stats.reviewCount}
-    location = {dataeach.location}
-    title = {dataeach.title}
-    price = {dataeach.price}
+      key = {dataeach.id}
+      dataeach = {dataeach}
     />
   )
   return (
-    <div>
+    <div className='cards-list'>
       {carddata}
     </div>
   );
