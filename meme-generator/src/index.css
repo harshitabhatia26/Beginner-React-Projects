@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.navbar {
+  background-image: linear-gradient(to right, #672280 , #A626D3);
+  color: white;
+  height: 5rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.navright {
+  font-size: 1.2rem;
+}
+
+input {
+  height: 3rem;
+  width: 20rem;
+}
+
+button {
+  background-image: linear-gradient(to right, #672280 , #A626D3);
+}
