@@ -30,3 +30,22 @@ input {
 button {
   background-image: linear-gradient(to right, #672280 , #A626D3);
 }
+
+.meme {
+  width: 20rem;
+}
+
+
+
+@media screen and (min-width: 300px) {
+  .meme {
+    width: 20rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .meme {
+    width: 40rem;
+  }
+}
+
